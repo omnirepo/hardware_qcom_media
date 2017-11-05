@@ -102,6 +102,7 @@ endif
 # 			Make the Shared library (libOmxVdec)
 # ---------------------------------------------------------------------------------
 
+ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE                    := libOmxVdec
@@ -124,7 +125,7 @@ LOCAL_STATIC_LIBRARIES  := libOmxVidcCommon
 LOCAL_SRC_FILES         += src/omx_vdec_v4l2.cpp
 
 include $(BUILD_SHARED_LIBRARY)
-
+endif # QCPATH
 
 
 # ---------------------------------------------------------------------------------
